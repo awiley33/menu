@@ -5,14 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/", to: "welcome#index"
 
-# [X] done
 
-# User Story 1, Parent Index
-
-# For each parent table
-# As a visitor
-# When I visit '/restaurants'
-# Then I see the name of each restaurant record in the system
 get "/restaurants", to: "restaurants#index"
 
 # [ ] done
