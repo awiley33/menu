@@ -8,5 +8,8 @@ Rails.application.routes.draw do
 
 get "/restaurants", to: "restaurants#index"
 get "/restaurants/:id", to: "restaurants#show"
+get "/plates", to: "plates#index"
+get "/plates/:id", to: "plates#show"
+get "/restaurants/:restaurant_id/plates", to: "plates#assoc"
 
 end
