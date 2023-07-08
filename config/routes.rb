@@ -7,16 +7,6 @@ Rails.application.routes.draw do
 
 
 get "/restaurants", to: "restaurants#index"
-
-# [ ] done
-
-# User Story 2, Parent Show 
-
-# As a visitor
-# When I visit '/parents/:id'
-# Then I see the parent with that id including the parent's attributes
-# (data from each column that is on the parent table)
-
 get "/restaurants/:id", to: "restaurants#show"
 
 end
