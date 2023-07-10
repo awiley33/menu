@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Restaurant's menu page" do
+RSpec.describe "Restaurant's plates index page" do
   it "displays every plate associated with the restaurant, as well as each plate's attributes" do
     sybergs = Restaurant.create!(name: "Syberg's", location: "St. Louis, MO", rating: 4.5, reviews: 1765, breakfast: false)
     chicken_wings = sybergs.plates.create!(name: "Syberg's Famous Wings", price: 10.99, serves: 1, vegetarian: false, category: "entree")
