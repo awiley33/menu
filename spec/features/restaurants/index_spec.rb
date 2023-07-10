@@ -12,4 +12,24 @@ RSpec.describe "restaurants index page", type: :feature do
 
     expect(page).to_not have_content("Taco Bell")
   end
+
+  it "orders the Restaurants by most recently created" do
+
+  end
+
+  it "displays the datetime in which the Restaurant was created" do
+
+  end
+
+
 end
+
+
+# [ ] done
+
+# User Story 6, Parent Index sorted by Most Recently Created 
+
+# As a visitor
+# When I visit the parent index,
+# I see that records are ordered by most recently created first
+# And next to each of the records I see when it was created

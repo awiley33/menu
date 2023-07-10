@@ -6,9 +6,4 @@ class PlatesController < ApplicationController
   def show
     @plate = Plate.find(params[:id])
   end
-
-  def assoc
-    @restaurant = Restaurant.find(params[:id])
-    @plates = Plate.find(params[:restaurant_id])
-  end
 end

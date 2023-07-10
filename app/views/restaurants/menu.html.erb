@@ -1,0 +1,13 @@
+<h1><%=@restaurant.name%> Menu</h1>
+
+<%= @restaurant.plates.each do |plate| %>
+<h3><%=plate.name%></h3>
+
+
+<p>Price: <%=plate.price%></p>
+<p>Serves:<%=plate.serves%></p>
+<p>Vegetarian: <%=plate.vegetarian%></p>
+<p>Category: <%=plate.category%></p>
+
+
+<%end%>
