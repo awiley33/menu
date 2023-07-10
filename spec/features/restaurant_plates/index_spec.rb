@@ -6,7 +6,7 @@ RSpec.describe "Restaurant's plates index page" do
     chicken_wings = sybergs.plates.create!(name: "Syberg's Famous Wings", price: 10.99, serves: 1, vegetarian: false, category: "entree")
     salad = sybergs.plates.create!(name: "Dinner Salad", price: 4.99, serves: 1, vegetarian: true, category: "side")
 
-    visit "/restaurants/#{sybergs.id}/menu"
+    visit "/restaurants/#{sybergs.id}/plates"
 
     expect(page).to have_content(chicken_wings.name)
     expect(page).to have_content(chicken_wings.price)

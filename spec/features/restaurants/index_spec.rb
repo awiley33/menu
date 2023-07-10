@@ -20,7 +20,6 @@ RSpec.describe "restaurants index page", type: :feature do
     visit "/restaurants"
 
     expect(bakery_and_pickle.name).to appear_before(sybergs.name)
-    # bakery_and_pickle.should appear_before(sybergs)
 
 
   end
