@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.Describe "Restaurant's menu page" do
+RSpec.describe "Restaurant's menu page" do
   it "displays every plate associated with the restaurant, as well as each plate's attributes" do
     sybergs = Restaurant.create!(name: "Syberg's", location: "St. Louis, MO", rating: 4.5, reviews: 1765, breakfast: false)
     chicken_wings = sybergs.plates.create!(name: "Syberg's Famous Wings", price: 10.99, serves: 1, vegetarian: false, category: "entree")
@@ -8,13 +8,17 @@ RSpec.Describe "Restaurant's menu page" do
 
     visit "/restaurants/#{sybergs.id}/menu"
 
-    expect(page).to have_content()
+    expect(page).to have_content(chicken_wings.name)
+    expect(page).to have_content(chicken_wings.price)
+    expect(page).to have_content(chicken_wings.serves)
+    expect(page).to have_content(chicken_wings.vegetarian)
+    expect(page).to have_content(chicken_wings.category)
+    expect(page).to have_content(salad.name)
+    expect(page).to have_content(salad.price)
+    expect(page).to have_content(salad.serves)
+    expect(page).to have_content(salad.vegetarian)
+    expect(page).to have_content(salad.category)
 
+    expect(page).to_not have_content("taco")
   end
 end
-
-
-As a visitor
-When I visit '/parents/:parent_id/child_table_name'
-Then I see each Child that is associated with that Parent with each Child's attributes
-(data from each column that is on the child table)

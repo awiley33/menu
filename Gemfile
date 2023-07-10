@@ -56,6 +56,7 @@ group :development, :test do
   gem "capybara"
   gem "simplecov"
   gem "shoulda-matchers"
+  gem "orderly"
 end
 
 group :development do

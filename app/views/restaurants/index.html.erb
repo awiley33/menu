@@ -1,5 +1,5 @@
 <p>Choose a Restaurant below:</p>
 
 <% @restaurants.each do |restaurant| %>
-<%= restaurant.name %>
+<p><%=restaurant.name%>  <%=restaurant.created_at%><br></p>
 <%end%>
