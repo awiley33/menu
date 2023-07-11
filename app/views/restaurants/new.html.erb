@@ -1,0 +1,13 @@
+<%= form_with url: "/restaurants", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :location %>
+  <%= form.text_field :location %><br>
+  <%= form.label :rating %>
+  <%= form.text_field :rating %><br>
+  <%= form.label :reviews %>
+  <%= form.text_field :reviews %><br>
+  <%= form.label :breakfast %>
+  <%= form.text_field :breakfast %><br>
+  <%= form.submit "Create Restaurant" %>
+<% end %>
