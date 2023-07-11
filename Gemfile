@@ -57,6 +57,7 @@ group :development, :test do
   gem "simplecov"
   gem "shoulda-matchers"
   gem "orderly"
+  gem "launchy"
 end
 
 group :development do
