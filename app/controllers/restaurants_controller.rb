@@ -12,8 +12,12 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    artist = Restaurant.create!(name: params[:name], location: params[:location], rating: params[:rating], reviews: params[:reviews], breakfast: params[:breakfast])
+    artist = Restaurant.create!(restaurant_params)
     redirect_to "/restaurants/#{artist.id}"
+  end
+
+  def restaurant_params
+    params.permit(:name, :location, :rating, :reviews, :breakfast)
   end
 
 end
