@@ -3,4 +3,5 @@
 <p>Rating: <%=@restaurant.rating%></p>
 <p>Reviews: <%=@restaurant.reviews%></p>
 <p>Offers Breakfast?: <%=@restaurant.breakfast%></p>
-<p>Menu Items: <%=@restaurant.plates.count%>
+<p>Available Menu Items: <%=@restaurant.plates.count%></p><br>
+<a href="/restaurants/<%="#{@restaurant.id}"%>/plates">See Full Menu</a>
