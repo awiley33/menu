@@ -1,0 +1,13 @@
+<%= form_with url: "/restaurants/#{@restaurant.id}/plates", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :price %>
+  <%= form.text_field :price %><br>
+  <%= form.label :serves %>
+  <%= form.text_field :serves %><br>
+  <%= form.label :vegetarian %>
+  <%= form.text_field :vegetarian %><br>
+  <%= form.label :category %>
+  <%= form.text_field :category %><br>
+  <%= form.submit "Create Plate" %>
+<% end %>

@@ -1,13 +1,11 @@
 <h1><%=@restaurant.name%> Menu</h1>
 
 <% @restaurant.plates.each do |plate| %>
-<h3><%=plate.name%></h3>
-
-
+<h3><%=plate.name%></h3><br><br>
 <p>Price: <%=plate.price%></p>
 <p>Serves: <%=plate.serves%></p>
 <p>Vegetarian: <%=plate.vegetarian%></p>
 <p>Category: <%=plate.category%></p>
-
-
 <%end%>
+
+<%= link_to "Create Plate", "/restaurants/#{@restaurant.id}/plates/new" %>

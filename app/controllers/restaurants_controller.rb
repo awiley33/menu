@@ -11,8 +11,8 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    artist = Restaurant.create!(restaurant_params)
-    redirect_to "/restaurants/#{artist.id}"
+    restaurant = Restaurant.create!(restaurant_params)
+    redirect_to "/restaurants/#{restaurant.id}"
   end
 
   def edit
