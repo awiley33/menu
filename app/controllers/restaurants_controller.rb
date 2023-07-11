@@ -8,12 +8,25 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-
   end
 
   def create
-    artist = Restaurant.create!(name: params[:name], location: params[:location], rating: params[:rating], reviews: params[:reviews], breakfast: params[:breakfast])
-    redirect_to "/restaurants/#{artist.id}"
+    restaurant = Restaurant.create!(restaurant_params)
+    redirect_to "/restaurants/#{restaurant.id}"
   end
 
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+  
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(restaurant_params)
+    redirect_to "/restaurants/#{@restaurant.id}"
+  end
+
+private
+  def restaurant_params
+    params.permit(:name, :location, :rating, :reviews, :breakfast)
+  end
 end

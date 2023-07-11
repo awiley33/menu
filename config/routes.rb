@@ -9,9 +9,13 @@ Rails.application.routes.draw do
 get "/restaurants", to: "restaurants#index"
 get "restaurants/new", to:"restaurants#new"
 get "/restaurants/:id", to: "restaurants#show"
-get "/restaurants/:id/plates", to: "restaurant_plates#index"
+patch "/restaurants/:id", to: "restaurants#update"
+get "/restaurants/:id/plates", to: "restaurants/plates#index"
+get "/restaurants/:id/edit", to: "restaurants#edit"
 get "/plates", to: "plates#index"
 get "/plates/:id", to: "plates#show"
 post "/restaurants", to: "restaurants#create"
+get "restaurants/:id/plates/new", to: "restaurants/plates#new"
+post "restaurants/:id/plates", to: "restaurants/plates#create"
 
 end
