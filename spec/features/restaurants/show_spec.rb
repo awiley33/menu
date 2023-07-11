@@ -38,4 +38,11 @@ RSpec.describe "restaurants show page", type: :feature do
     
     expect(page).to have_content("Menu Items: #{@sybergs.plates.count}")
   end
+
+  it "has a link for both the restaurant and plate indices at the top of the page" do
+    visit "/restaurants/#{@bakery_and_pickle.id}"
+
+    expect(page).to have_link("Restaurants", :href => "/restaurants")
+    expect(page).to have_link("Plates", :href => "/plates")
+  end
 end
