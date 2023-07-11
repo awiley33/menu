@@ -25,6 +25,7 @@ class RestaurantsController < ApplicationController
     redirect_to "/restaurants/#{@restaurant.id}"
   end
 
+private
   def restaurant_params
     params.permit(:name, :location, :rating, :reviews, :breakfast)
   end
