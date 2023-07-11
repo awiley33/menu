@@ -4,4 +4,5 @@
 <p>Reviews: <%=@restaurant.reviews%></p>
 <p>Offers Breakfast?: <%=@restaurant.breakfast%></p>
 <p>Available Menu Items: <%=@restaurant.plates.count%></p><br>
-<a href="/restaurants/<%="#{@restaurant.id}"%>/plates">See Full Menu</a>
+<a href="/restaurants/<%="#{@restaurant.id}"%>/plates">See Full Menu</a><br>
+<%= link_to "Update #{@restaurant.name}", "/restaurants/#{@restaurant.id}/edit" %>
